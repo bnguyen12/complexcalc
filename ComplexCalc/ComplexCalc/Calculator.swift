@@ -15,8 +15,8 @@ class Calculator {
         return op(lhs, rhs)
     }
     
-    func mathOp(args: [Int], beg: Int, op: ([Int]) -> Int) -> Int {
-        return op(args)
+    func mathOp(args: [Int], beg: Int, op: (Int, Int) -> Int) -> Int {
+        return args.reduce(beg, op)
     }
 
     func add(lhs: Int, rhs: Int) -> Int {
@@ -29,6 +29,10 @@ class Calculator {
             sum += number
         }
         return sum
+    }
+    
+    func add(lhs: [String: Int], rhs: [String: Int]) {
+        
     }
     
     func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
