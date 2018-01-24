@@ -31,8 +31,10 @@ class Calculator {
         return sum
     }
     
-    func add(lhs: [String: Int], rhs: [String: Int]) {
-        
+    func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x: Int = lhs["x"]! + rhs["x"]!
+        let y: Int = lhs["y"]! + rhs["y"]!
+        return ["x": x, "y": y]
     }
     
     func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
@@ -45,6 +47,12 @@ class Calculator {
 
     func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
         return (lhs.0 - rhs.0, lhs.1 - rhs.1)
+    }
+    
+    func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x: Int = lhs["x"]! - rhs["x"]!
+        let y: Int = lhs["y"]! - rhs["y"]!
+        return ["x": x, "y": y]
     }
     
     func multiply(lhs: Int, rhs: Int) -> Int {

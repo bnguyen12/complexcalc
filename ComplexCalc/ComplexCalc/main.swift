@@ -13,7 +13,6 @@ print("UW Complex Calculator v0.1")
 let calc = Calculator()  // Don't change this declaration name; it's used in all the tests below
 
 // ====> Add your own tests here if you wish <====
-assert(calc.mathOp(args: [1, 2, 3], beg: 0, op: { $0 + $1 }) == 6)
 
 // ====> Do not modify code in this section <====
 assert(calc.add(lhs: 2, rhs: 2) == 4)
